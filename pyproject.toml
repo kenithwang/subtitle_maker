@@ -1,0 +1,14 @@
+[project]
+name = "ai-video-transcriber"
+version = "0.1.0"
+description = "Gemini-powered subtitle maker that generates SRT or ASS from local media or URLs"
+requires-python = ">=3.10"
+dependencies = [
+    "yt-dlp>=2024.12.13",
+    "google-genai>=0.2.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0",
+    "rapidfuzz>=3.14.1",
+    "faster-whisper>=1.2.0",
+    "pysubs2>=1.8.0",
+]
