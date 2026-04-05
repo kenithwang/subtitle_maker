@@ -4,7 +4,7 @@
 
 English | [中文](README_ZH.md)
 
-Gemini-powered subtitle maker for local media files and online videos, with `.srt` and `.ass` export.
+AI subtitle maker for local media files and online videos, with Gemini generation, local alignment, and `.srt` / `.ass` export.
 
 </div>
 
@@ -53,6 +53,32 @@ uv run python cli.py \
 ```
 
 - If you omit `--outdir`, the subtitle file is written next to the local media file by default.
+
+## Recommended Workflow For English Movies
+
+If you want the fastest end-to-end path, the normal CLI flow is still:
+
+```bash
+uv run python cli.py \
+  --input /path/to/movie.mkv \
+  --format ass \
+  --timing align \
+  --mode bilingual-zh
+```
+
+But for dense English movie dialogue where coverage matters more than convenience, treat chunked Gemini subtitle generation as the convenient path, not the highest-coverage path.
+
+Best practice in that case is:
+
+1. Build a whole-movie English master transcript with `faster-whisper`.
+2. Translate that English master separately with GPT-5.4.
+3. Merge the Chinese translation back without changing the English cue timings.
+
+Important limitation:
+
+- `--timing align` can improve timestamps.
+- It cannot recover dialogue that chunked generation never emitted in the first place.
+- If you see merged lines or missing stretches of dialogue, the root cause is usually transcript coverage, not timing drift.
 
 ### URL to subtitles
 
