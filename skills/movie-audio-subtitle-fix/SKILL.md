@@ -77,8 +77,8 @@ Example:
 
 ```bash
 ALIGN_DEVICE=cuda \
-../../.venv/bin/python \
-  scripts/prepare_english_subtitle_source.py \
+./.venv/bin/python \
+  skills/movie-audio-subtitle-fix/scripts/prepare_english_subtitle_source.py \
   "/path/to/movie.mkv"
 ```
 
@@ -127,8 +127,8 @@ This preserves the original English cue timings and only replaces subtitle text 
 If an existing ASS already has the right text order but bad timestamps, use `scripts/order_only_retime_ass.py` directly with an existing words JSON.
 
 ```bash
-../../.venv/bin/python \
-  scripts/order_only_retime_ass.py \
+./.venv/bin/python \
+  skills/movie-audio-subtitle-fix/scripts/order_only_retime_ass.py \
   "/path/to/input.ass" \
   "/path/to/input.medium.en.words.json" \
   "/path/to/output_order_only.ass"

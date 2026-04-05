@@ -36,15 +36,15 @@ Generate the English source:
 
 ```bash
 ALIGN_DEVICE=cuda \
-../../.venv/bin/python \
-  scripts/prepare_english_subtitle_source.py \
+./.venv/bin/python \
+  skills/movie-audio-subtitle-fix/scripts/prepare_english_subtitle_source.py \
   "/path/to/movie.mkv"
 ```
 
 Merge bilingual subtitles after GPT-5.4 translation:
 
 ```bash
-python3 scripts/translate_ass_preserve_timing.py \
+python3 skills/movie-audio-subtitle-fix/scripts/translate_ass_preserve_timing.py \
   "/path/to/movie_fw_en.ass" \
   --output "/path/to/movie_fw_en_bilingual.ass" \
   --translations-file "/path/to/movie_fw_en_zh.tsv"
