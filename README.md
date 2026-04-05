@@ -156,6 +156,7 @@ uv run python cli.py \
   - `srt_maker.py`: Gemini-driven subtitle generation, chunk merge, and export formatting
   - `video_processor.py`: online media download and audio extraction
 - CLI entry point is `cli.py`; logs are printed directly to the terminal.
+- A reusable Codex skill bundle for local movie repair and higher-coverage subtitle workflows is included under `skills/movie-audio-subtitle-fix/`.
 
 ## 📄 License
 

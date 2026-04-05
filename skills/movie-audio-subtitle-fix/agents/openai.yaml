@@ -1,0 +1,7 @@
+interface:
+  display_name: "Movie Audio Subtitle Fix"
+  short_description: "Repair movie audio and generate aligned ASS subtitles."
+  default_prompt: "Use $movie-audio-subtitle-fix to repair a local movie's audio track or generate and retime ASS subtitles."
+
+policy:
+  allow_implicit_invocation: true

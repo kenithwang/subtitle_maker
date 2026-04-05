@@ -156,6 +156,7 @@ uv run python cli.py \
   - `srt_maker.py`：Gemini 字幕生成、分片合并与格式导出
   - `video_processor.py`：在线视频下载与音频提取
 - CLI 入口为 `cli.py`，日志信息直接输出到终端。
+- 仓库内还附带了一套可复用的 Codex skill，位于 `skills/movie-audio-subtitle-fix/`，用于本地电影音轨修复和更高覆盖率的字幕工作流。
 
 ## 📄 许可协议
 
